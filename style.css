@@ -35,22 +35,26 @@ h1{
 }
 
 .cartas{
-    display:flex;
+    display:grid;
+    grid-template-columns:repeat(2, 230px);
     justify-content:center;
-    gap:110px;
-    flex-wrap:wrap;
+    gap:35px 25px;
 }
 
 .carta{
-    width:150px;
+    width:230px;
     background:#fff;
     border-radius:20px;
-    padding:16px;
-    box-shadow:0 10px 24px rgba(0,0,0,.10);
+    padding:25px;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
     transition:.35s;
     cursor:pointer;
 }
 
+#carta3{
+    grid-column:1 / span 2;
+    justify-self:center;
+}
 .carta:hover{
     transform:translateY(-6px) scale(1.02);
 }
