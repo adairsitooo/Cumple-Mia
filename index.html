@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mia</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Feliz cumpleaños, Mia</h1>
+
+        <p class="subtitulo">
+            Cada carta fue escrita para un momento diferente.
+            Ábrelas únicamente cuando llegue su tiempo.
+        </p>
+
+        <div class="cartas">
+
+            <div class="carta" id="carta1">
+                <img src="img/carta1.png" alt="Primera carta">
+                <h2>Primera carta</h2>
+            </div>
+
+
+            <div class="carta bloqueada" id="carta2">
+                <img src="img/carta2.png" alt="Segunda carta">
+                <h2>Segunda carta</h2>
+                <span id="contador2">Calculando...</span>
+            </div>
+
+
+            <div class="carta bloqueada" id="carta3">
+                <img src="img/carta3.png" alt="Tercera carta">
+                <h2>Tercera carta</h2>
+                <span id="contador3">Calculando...</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="visorCarta" class="visor oculto">
+
+        <div class="papel">
+
+            <button id="cerrar">&times;</button>
+
+            <img id="imagenCarta" class="foto-carta" src="" alt="Foto">
+
+            <div id="textoCarta" class="texto"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
