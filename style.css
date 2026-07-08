@@ -5,43 +5,65 @@
 }
 
 body{
+
     font-family:'Dancing Script', cursive;
+
     min-height:100vh;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
-    background:linear-gradient(135deg,#ffffff,#f8f8f8,#ececec);
+    background:
+    radial-gradient(circle,#ffffff,#f4eee7);
 
     color:#333;
 }
 
 
 .contenedor{
+
     width:92%;
-    max-width:1280px;
+
+    max-width:1200px;
+
     text-align:center;
+
 }
 
 
+/* TITULO */
+
 h1{
-    font-size:50px;
-    margin-bottom:20px;
+
+    font-size:55px;
+
+    margin-bottom:15px;
+
     font-weight:700;
-    color:#222;
+
+    color:#1f1f1f;
+
 }
 
 
 .subtitulo{
-    font-size:24px;
-    margin-bottom:70px;
+
+    font-size:25px;
+
+    margin-bottom:60px;
+
     line-height:1.5;
-    color:#666;
+
+    color:#777;
+
 }
 
 
-/* Cartas */
+
+/* CARTAS */
 
 .cartas{
 
@@ -49,58 +71,115 @@ h1{
 
     justify-content:center;
 
-    gap:70px;
+    gap:45px;
 
     flex-wrap:wrap;
 
 }
 
 
+
 .carta{
 
-    width:200px;
+    width:230px;
 
-    background:#fff;
+    min-height:280px;
 
-    border-radius:20px;
 
-    padding:20px;
+    background:
+    linear-gradient(
+    145deg,
+    #fff,
+    #faf3eb
+    );
+
+
+    border-radius:22px;
+
+
+    padding:30px 20px;
+
+
+    border:1px solid #e6d8c8;
+
 
     box-shadow:
-    0 12px 30px rgba(0,0,0,.12);
+    0 15px 35px rgba(0,0,0,.12);
 
-    transition:.35s;
+
+    transition:.45s;
+
 
     cursor:pointer;
 
+
+    position:relative;
+
+    overflow:hidden;
+
 }
+
+
+
+.carta::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:#d7b28c;
+
+}
+
 
 
 .carta:hover{
 
     transform:
-    translateY(-8px)
-    scale(1.03);
+    translateY(-15px)
+    rotate(1deg);
 
 
     box-shadow:
-    0 18px 40px rgba(0,0,0,.18);
+    0 25px 50px rgba(0,0,0,.18);
 
 }
+
 
 
 .carta img{
 
-    width:110px;
+    width:130px;
 
-    margin-bottom:18px;
+    height:130px;
+
+    object-fit:cover;
+
+
+    border-radius:15px;
+
+
+    margin-bottom:20px;
+
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.12);
 
 }
 
 
+
 .carta h2{
 
-    font-size:28px;
+    font-size:30px;
 
     margin-bottom:10px;
 
@@ -109,17 +188,19 @@ h1{
 }
 
 
+
 .carta span{
 
     display:block;
 
     margin-top:15px;
 
-    font-size:18px;
+    font-size:17px;
 
     color:#777;
 
 }
+
 
 
 .bloqueada{
@@ -130,7 +211,7 @@ h1{
 
 
 
-/* Visor */
+/* VISOR */
 
 .visor{
 
@@ -138,7 +219,13 @@ h1{
 
     inset:0;
 
-    background:rgba(255,255,255,.95);
+
+    background:
+    rgba(255,255,255,.75);
+
+
+    backdrop-filter:blur(10px);
+
 
     display:flex;
 
@@ -146,12 +233,15 @@ h1{
 
     align-items:center;
 
+
     z-index:1000;
 
+
     animation:
-    aparecerFondo .4s ease;
+    aparecer .4s ease;
 
 }
+
 
 
 .oculto{
@@ -162,31 +252,45 @@ h1{
 
 
 
-/* Carta abierta */
+/* PAPEL */
 
 .papel{
 
     width:90%;
 
+
     max-width:900px;
+
 
     height:90vh;
 
-    background:#fff;
 
-    border-radius:20px;
+    background:
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #fffaf4
+    );
+
+
+    border-radius:25px;
+
 
     overflow-y:auto;
 
+
     box-shadow:
-    0 20px 50px rgba(0,0,0,.20);
+    0 30px 80px rgba(0,0,0,.25);
+
 
     position:relative;
 
+
     animation:
-    abrirCarta .5s ease;
+    abrir .7s ease;
 
 }
+
 
 
 
@@ -194,69 +298,87 @@ h1{
 
     width:100%;
 
+
     max-height:400px;
+
 
     object-fit:cover;
 
+
     display:block;
 
+
     border-radius:
-    20px 20px 0 0;
+    25px 25px 0 0;
 
 }
 
 
 
+
 .texto{
 
-    padding:50px;
+    padding:55px;
 
-    font-size:20px;
+
+    font-size:21px;
+
 
     line-height:1.9;
 
+
     text-align:justify;
+
 
     color:#444;
 
 }
 
 
+
 .texto h2{
 
     text-align:left;
 
-    font-size:36px;
+
+    font-size:40px;
+
 
     font-weight:700;
 
-    margin-bottom:30px;
+
+    margin-bottom:35px;
+
 
     color:#222;
 
 }
 
 
+
 .texto p{
 
-    margin-bottom:25px;
+    margin-bottom:28px;
 
 }
 
 
 
-/* Botón cerrar */
+/* BOTON */
 
 #cerrar{
 
     position:absolute;
 
-    top:15px;
 
-    right:15px;
+    top:18px;
+
+
+    right:18px;
 
 
     width:45px;
+
 
     height:45px;
 
@@ -267,22 +389,23 @@ h1{
     border-radius:50%;
 
 
-    background:#fff;
+    background:white;
 
 
-    font-size:24px;
+    font-size:25px;
 
 
     cursor:pointer;
 
 
     box-shadow:
-    0 4px 15px rgba(0,0,0,.15);
+    0 5px 20px rgba(0,0,0,.15);
 
 
     z-index:10;
 
 }
+
 
 
 #cerrar:hover{
@@ -293,16 +416,15 @@ h1{
 
 
 
-/* Animaciones */
+/* ANIMACIONES */
 
-@keyframes aparecerFondo{
+@keyframes aparecer{
 
     from{
 
         opacity:0;
 
     }
-
 
     to{
 
@@ -314,15 +436,16 @@ h1{
 
 
 
-@keyframes abrirCarta{
+@keyframes abrir{
 
     from{
 
         opacity:0;
 
         transform:
-        scale(.85)
-        translateY(40px);
+        scale(.8)
+        translateY(60px)
+        rotateX(10deg);
 
     }
 
@@ -333,7 +456,8 @@ h1{
 
         transform:
         scale(1)
-        translateY(0);
+        translateY(0)
+        rotateX(0);
 
     }
 
