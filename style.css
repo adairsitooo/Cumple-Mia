@@ -12,10 +12,11 @@ body{
     justify-content:center;
     align-items:center;
 
-    background:linear-gradient(135deg,#ffffff,#faf7f3,#eee7df);
+    background:linear-gradient(135deg,#ffffff,#f8f8f8,#ececec);
 
     color:#333;
 }
+
 
 .contenedor{
     width:92%;
@@ -24,8 +25,6 @@ body{
 }
 
 
-/* Titulo */
-
 h1{
     font-size:50px;
     margin-bottom:20px;
@@ -33,104 +32,70 @@ h1{
     color:#222;
 }
 
+
 .subtitulo{
     font-size:24px;
-    margin-bottom:65px;
-    line-height:1.6;
-    color:#777;
+    margin-bottom:70px;
+    line-height:1.5;
+    color:#666;
 }
 
 
 /* Cartas */
 
 .cartas{
+
     display:flex;
+
     justify-content:center;
-    gap:50px;
+
+    gap:70px;
+
     flex-wrap:wrap;
+
 }
 
 
 .carta{
-    width:220px;
 
-    background:#fffdf8;
+    width:200px;
 
-    border:1px solid #e8ded1;
+    background:#fff;
 
-    border-radius:18px;
+    border-radius:20px;
 
-    padding:25px;
-
+    padding:20px;
 
     box-shadow:
-    0 12px 25px rgba(0,0,0,.10);
+    0 12px 30px rgba(0,0,0,.12);
 
-
-    transition:.4s;
+    transition:.35s;
 
     cursor:pointer;
 
-    position:relative;
-
-    overflow:hidden;
-}
-
-
-/* Detalle superior */
-
-.carta::before{
-    content:"✦";
-
-    display:block;
-
-    font-size:22px;
-
-    color:#c8a77b;
-
-    margin-bottom:10px;
 }
 
 
 .carta:hover{
 
     transform:
-    translateY(-12px)
+    translateY(-8px)
     scale(1.03);
 
 
     box-shadow:
-    0 22px 45px rgba(0,0,0,.16);
+    0 18px 40px rgba(0,0,0,.18);
+
 }
 
-
-
-/* Imagen */
 
 .carta img{
 
-    width:120px;
-
-    height:120px;
-
-    object-fit:cover;
-
-
-    border-radius:14px;
-
-
-    padding:8px;
-
-
-    background:#f5eee6;
-
-
-    border:1px solid #ddd0c0;
-
+    width:110px;
 
     margin-bottom:18px;
-}
 
+}
 
 
 .carta h2{
@@ -144,7 +109,6 @@ h1{
 }
 
 
-
 .carta span{
 
     display:block;
@@ -153,18 +117,20 @@ h1{
 
     font-size:18px;
 
-    color:#888;
+    color:#777;
+
 }
 
 
 .bloqueada{
 
     opacity:.55;
+
 }
 
 
 
-/* Ventana carta */
+/* Visor */
 
 .visor{
 
@@ -172,10 +138,7 @@ h1{
 
     inset:0;
 
-
-    background:
-    rgba(250,245,240,.96);
-
+    background:rgba(255,255,255,.95);
 
     display:flex;
 
@@ -183,10 +146,12 @@ h1{
 
     align-items:center;
 
-
     z-index:1000;
-}
 
+    animation:
+    aparecerFondo .4s ease;
+
+}
 
 
 .oculto{
@@ -197,7 +162,7 @@ h1{
 
 
 
-/* Papel */
+/* Carta abierta */
 
 .papel{
 
@@ -205,70 +170,55 @@ h1{
 
     max-width:900px;
 
-
     height:90vh;
 
+    background:#fff;
 
-    background:#fffdf8;
-
-
-    border-radius:18px;
-
+    border-radius:20px;
 
     overflow-y:auto;
 
-
     box-shadow:
-    0 25px 60px rgba(0,0,0,.20);
-
+    0 20px 50px rgba(0,0,0,.20);
 
     position:relative;
 
+    animation:
+    abrirCarta .5s ease;
 
-    border:1px solid #eee2d5;
 }
 
 
-
-/* Foto */
 
 .foto-carta{
 
     width:100%;
 
-
     max-height:400px;
-
 
     object-fit:cover;
 
-
     display:block;
 
-
     border-radius:
-    18px 18px 0 0;
+    20px 20px 0 0;
+
 }
 
 
-
-/* Texto */
 
 .texto{
 
     padding:50px;
 
-
     font-size:20px;
-
 
     line-height:1.9;
 
-
     text-align:justify;
 
-
     color:#444;
+
 }
 
 
@@ -276,33 +226,30 @@ h1{
 
     text-align:left;
 
-
-    font-size:38px;
-
+    font-size:36px;
 
     font-weight:700;
 
-
     margin-bottom:30px;
 
-
     color:#222;
+
 }
 
 
 .texto p{
 
     margin-bottom:25px;
+
 }
 
 
 
-/* Boton cerrar */
+/* Botón cerrar */
 
 #cerrar{
 
     position:absolute;
-
 
     top:15px;
 
@@ -334,12 +281,60 @@ h1{
 
 
     z-index:10;
-}
 
+}
 
 
 #cerrar:hover{
 
     transform:scale(1.1);
+
+}
+
+
+
+/* Animaciones */
+
+@keyframes aparecerFondo{
+
+    from{
+
+        opacity:0;
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+@keyframes abrirCarta{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        scale(.85)
+        translateY(40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+        scale(1)
+        translateY(0);
+
+    }
 
 }
