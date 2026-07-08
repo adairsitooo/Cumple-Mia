@@ -143,6 +143,21 @@ carta1.addEventListener("click", () => {
         <p>
             Feliz cumpleaños, Mia 🖤
         </p>
+        <p>
+    Hice este collage, más sencillo la verdad, porque es el primer regalo de la primera carta; las otras dos mejorarán más.
+</p>
+
+<p>
+    Coloca tus recuerdos inolvidables de tu viaje a Nueva York en esta página para crear un recuerdo especial:
+</p>
+
+<p style="text-align:center;">
+    <a href="https://adairsitooo.github.io/Collage-NY/"
+       target="_blank"
+       rel="noopener noreferrer">
+        Ver el collage de Nueva York
+    </a>
+</p>
     `;
 
     visor.classList.remove("oculto");
