@@ -7,38 +7,41 @@
 body{
     font-family:'Dancing Script', cursive;
     min-height:100vh;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     background:linear-gradient(135deg,#ffffff,#f8f8f8,#ececec);
+
     color:#333;
 }
 
 .contenedor{
-    width:95%;
-    max-width:1600px;
+    width:90%;
+    max-width:1100px;
     text-align:center;
 }
 
 h1{
-    font-size:38px;
-    margin-bottom:18px;
+    font-size:60px;
+    margin-bottom:15px;
     font-weight:700;
     color:#222;
 }
 
 .subtitulo{
-    font-size:18px;
-    margin-bottom:85px;
-    line-height:1.6;
+    font-size:28px;
+    margin-bottom:50px;
+    line-height:1.5;
     color:#666;
 }
 
 .cartas{
-    display:grid;
-    grid-template-columns:repeat(2, 230px);
+    display:flex;
     justify-content:center;
-    gap:35px 25px;
+    gap:40px;
+    flex-wrap:wrap;
 }
 
 .carta{
@@ -46,34 +49,33 @@ h1{
     background:#fff;
     border-radius:20px;
     padding:25px;
+
     box-shadow:0 12px 30px rgba(0,0,0,.12);
+
     transition:.35s;
     cursor:pointer;
 }
 
-#carta3{
-    grid-column:1 / span 2;
-    justify-self:center;
-}
 .carta:hover{
-    transform:translateY(-6px) scale(1.02);
+    transform:translateY(-10px) scale(1.04);
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
 }
 
 .carta img{
-    width:80px;
-    margin-bottom:16px;
+    width:140px;
+    margin-bottom:20px;
 }
 
 .carta h2{
-    font-size:22px;
-    margin-bottom:8px;
+    font-size:32px;
+    margin-bottom:10px;
     color:#222;
 }
 
 .carta span{
     display:block;
-    margin-top:12px;
-    font-size:15px;
+    margin-top:15px;
+    font-size:20px;
     color:#777;
 }
 
@@ -81,13 +83,18 @@ h1{
     opacity:.55;
 }
 
+/* Ventana de lectura */
+
 .visor{
     position:fixed;
     inset:0;
+
     background:rgba(255,255,255,.95);
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     z-index:1000;
 }
 
@@ -95,56 +102,94 @@ h1{
     display:none;
 }
 
+/* Hoja de la carta */
+
 .papel{
-    width:88%;
-    max-width:900px;
-    height:88vh;
+    width:90%;
+    max-width:850px;
+    height:90vh;
+
     background:#fff;
+
     border-radius:20px;
+
     overflow-y:auto;
-    box-shadow:0 18px 45px rgba(0,0,0,.18);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.20);
+
     position:relative;
 }
 
+/* Foto dentro de la carta */
+
 .foto-carta{
     width:100%;
-    max-height:380px;
+
+    max-height:400px;
+
     object-fit:cover;
+
     display:block;
+
     border-radius:20px 20px 0 0;
 }
 
+/* Texto largo */
+
 .texto{
-    padding:55px;
-    font-size:19px;
-    line-height:1.9;
+    padding:40px;
+
+    font-size:22px;
+
+    line-height:1.8;
+
     text-align:justify;
+
     color:#444;
 }
 
 .texto h2{
     text-align:left;
-    font-size:34px;
+
+    font-size:38px;
+
     font-weight:700;
-    margin-bottom:28px;
+
+    margin-bottom:30px;
+
     color:#222;
 }
 
 .texto p{
-    margin-bottom:24px;
+    margin-bottom:25px;
 }
+
+/* Botón cerrar */
 
 #cerrar{
     position:absolute;
+
     top:15px;
     right:15px;
-    width:42px;
-    height:42px;
+
+    width:45px;
+    height:45px;
+
     border:none;
+
     border-radius:50%;
-    background:#fff;
-    font-size:22px;
+
+    background:white;
+
+    font-size:24px;
+
     cursor:pointer;
-    box-shadow:0 4px 12px rgba(0,0,0,.12);
+
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+
     z-index:10;
+}
+
+#cerrar:hover{
+    transform:scale(1.1);
 }
