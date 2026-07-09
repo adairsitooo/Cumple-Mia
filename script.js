@@ -2,6 +2,7 @@ const carta1 = document.getElementById("carta1");
 const carta2 = document.getElementById("carta2");
 const carta3 = document.getElementById("carta3");
 
+const contador1 = document.getElementById("contador1");
 const contador2 = document.getElementById("contador2");
 const contador3 = document.getElementById("contador3");
 
@@ -10,14 +11,18 @@ const imagen = document.getElementById("imagenCarta");
 const texto = document.getElementById("textoCarta");
 const cerrar = document.getElementById("cerrar");
 
-
-// Fechas de desbloqueo
+// Fechas de desbloqueo (Carta 1 configurada para el 9 de Julio de 2026)
+const fechaCarta1 = new Date("2026-07-09T00:00:00");
 const fechaCarta2 = new Date("2026-09-05T00:00:00");
 const fechaCarta3 = new Date("2026-10-05T00:00:00");
 
-
 // Abrir primera carta
 carta1.addEventListener("click", () => {
+
+    if(new Date() < fechaCarta1){
+        alert("Esta carta todavía no está disponible.");
+        return;
+    }
 
     imagen.src = "img/foto1.png";
 
@@ -144,26 +149,21 @@ carta1.addEventListener("click", () => {
             Feliz cumpleaños, Mia 🖤
         </p>
         <p>
-    Hice este collage, más sencillo la verdad, porque es el primer regalo de la primera carta; las otras dos mejorarán más.
-</p>
+            Hice este collage, más sencillo la verdad, porque es el primer regalo de la primera carta; las otras dos mejorarán más.
+        </p>
 
-<p>
-    Coloca tus recuerdos inolvidables de tu viaje a Nueva York en esta página para crear un recuerdo especial:
-</p>
-
-<p style="text-align:center;">
-    <a href="https://adairsitooo.github.io/Collage-NY/"
-       target="_blank"
-       rel="noopener noreferrer">
-        Ver el collage de Nueva York
-    </a>
-</p>
+        <p style="text-align:center;">
+            <a href="https://adairsitooo.github.io/Collage-NY/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Ver el collage de Nueva York
+            </a>
+        </p>
     `;
 
     visor.classList.remove("oculto");
 
 });
-
 
 // Abrir segunda carta
 carta2.addEventListener("click", () => {
@@ -177,16 +177,12 @@ carta2.addEventListener("click", () => {
 
     texto.innerHTML = `
         <h2>Segunda carta</h2>
-
-        <p>
-            Aquí estará la segunda carta.
-        </p>
+        <p>Aquí estará la segunda carta.</p>
     `;
 
     visor.classList.remove("oculto");
 
 });
-
 
 // Abrir tercera carta
 carta3.addEventListener("click", () => {
@@ -200,48 +196,43 @@ carta3.addEventListener("click", () => {
 
     texto.innerHTML = `
         <h2>Tercera carta</h2>
-
-        <p>
-            Aquí estará la tercera carta.
-        </p>
+        <p>Aquí estará la tercera carta.</p>
     `;
 
     visor.classList.remove("oculto");
 
 });
 
-
 // Contadores
 function actualizarContadores(){
 
     const ahora = new Date();
 
-
-    if(ahora >= fechaCarta2){
-
-        carta2.classList.remove("bloqueada");
-        contador2.innerHTML = "Disponible";
-
+    // Contador Carta 1
+    if(ahora >= fechaCarta1){
+        carta1.classList.remove("bloqueada");
+        contador1.innerHTML = "Disponible";
     }else{
-
-        contador2.innerHTML = tiempoRestante(fechaCarta2);
-
+        contador1.innerHTML = tiempoRestante(fechaCarta1);
     }
 
+    // Contador Carta 2
+    if(ahora >= fechaCarta2){
+        carta2.classList.remove("bloqueada");
+        contador2.innerHTML = "Disponible";
+    }else{
+        contador2.innerHTML = tiempoRestante(fechaCarta2);
+    }
 
+    // Contador Carta 3
     if(ahora >= fechaCarta3){
-
         carta3.classList.remove("bloqueada");
         contador3.innerHTML = "Disponible";
-
     }else{
-
         contador3.innerHTML = tiempoRestante(fechaCarta3);
-
     }
 
 }
-
 
 function tiempoRestante(fecha){
 
@@ -259,20 +250,17 @@ function tiempoRestante(fecha){
         (1000 * 60)
     );
 
-
     return `Disponible en ${dias} días, ${horas} horas y ${minutos} minutos`;
 
 }
 
-
 actualizarContadores();
 
-setInterval(actualizarContadores, 60000);
-
+// Opcional: Cambiado a 1000 (1 segundo) para que si está en la misma hora 
+// se vea fluida la cuenta atrás, si prefieres dejarlo en 60000 está perfecto.
+setInterval(actualizarContadores, 60000); 
 
 // Cerrar carta
 cerrar.addEventListener("click", () => {
-
     visor.classList.add("oculto");
-
 });
