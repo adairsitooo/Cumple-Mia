@@ -149,14 +149,14 @@ carta1.addEventListener("click", () => {
             Feliz cumpleaños, Mia 🖤
         </p>
         <p>
-            Hice este collage, más sencillo la verdad, porque es el primer regalo de la primera carta; las otras dos mejorarán más.
+            Por ser tu cumpleaños, te hice una segunda carta, una más dinámica, espero te guste.
         </p>
 
         <p style="text-align:center;">
-            <a href="https://adairsitooo.github.io/Collage-NY/"
+            <a href="https://adairsitooo.github.io/Cuaderno-Mia/"
                target="_blank"
                rel="noopener noreferrer">
-                Ver el collage de Nueva York
+                Ver regalo
             </a>
         </p>
     `;
