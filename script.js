@@ -156,7 +156,7 @@ carta1.addEventListener("click", () => {
             <a href="https://adairsitooo.github.io/Cuaderno-Mia/"
                target="_blank"
                rel="noopener noreferrer">
-                Ver regalo
+                Ver carta
             </a>
         </p>
     `;
