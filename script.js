@@ -6,10 +6,8 @@ const imagen = document.getElementById("imagenCarta");
 const texto = document.getElementById("textoCarta");
 const cerrar = document.getElementById("cerrar");
 
-// FECHA TEMPORAL: Configurada en el pasado para que puedas probarla de inmediato
-const fechaCarta1 = new Date("2020-01-01T00:00:00");
+const fechaCarta1 = new Date("2026-08-05T00:00:00");
 
-// Abrir primera carta
 carta1.addEventListener("click", () => {
 
     if(new Date() < fechaCarta1){
@@ -111,12 +109,10 @@ carta1.addEventListener("click", () => {
 
 });
 
-// Contadores
 function actualizarContadores(){
 
     const ahora = new Date();
 
-    // Contador Carta 1
     if(ahora >= fechaCarta1){
         carta1.classList.remove("bloqueada");
         contador1.innerHTML = "Disponible";
@@ -149,10 +145,10 @@ function tiempoRestante(fecha){
 actualizarContadores();
 setInterval(actualizarContadores, 60000); 
 
-// Cerrar carta
 cerrar.addEventListener("click", () => {
     visor.classList.add("oculto");
 });
+
 
 
 
