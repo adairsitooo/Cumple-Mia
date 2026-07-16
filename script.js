@@ -11,7 +11,7 @@ const imagen = document.getElementById("imagenCarta");
 const texto = document.getElementById("textoCarta");
 const cerrar = document.getElementById("cerrar");
 
-// Fechas de desbloqueo (Carta 1 configurada para el 9 de Julio de 2026)
+// Fechas de desbloqueo (Carta 1 configurada para el 5 de Agosto de 2026)
 const fechaCarta1 = new Date("2026-08-05T00:00:00");
 const fechaCarta2 = new Date("2026-09-05T00:00:00");
 const fechaCarta3 = new Date("2026-10-05T00:00:00");
@@ -264,3 +264,4 @@ setInterval(actualizarContadores, 60000);
 cerrar.addEventListener("click", () => {
     visor.classList.add("oculto");
 });
+
