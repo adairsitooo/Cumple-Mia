@@ -6,8 +6,8 @@ const imagen = document.getElementById("imagenCarta");
 const texto = document.getElementById("textoCarta");
 const cerrar = document.getElementById("cerrar");
 
-// Fecha de desbloqueo (Carta 1 configurada para el 5 de Agosto de 2026)
-const fechaCarta1 = new Date("2026-08-05T00:00:00");
+// FECHA TEMPORAL: Configurada en el pasado para que puedas probarla de inmediato
+const fechaCarta1 = new Date("2020-01-01T00:00:00");
 
 // Abrir primera carta
 carta1.addEventListener("click", () => {
@@ -23,133 +23,86 @@ carta1.addEventListener("click", () => {
         <h2>Para ti, Mia</h2>
 
         <p>
-            Mia, feliz cumpleaños, niña linda. Felices 17 años.
-            Gracias por todo lo que compartimos, eres una niña súper especial.
+            Mia, feliz cumpleaños niña linda, felices 17 años, gracias por todo lo que compartimos, eres una niña super especial.
         </p>
 
         <p>
-            Para la primera carta quise empezar desde cuando nos conocimos.
-            Aún recuerdo cuando te molestaba a lo lejos con un amigo mío,
-            recuerdo que te mirabas linda. Luego nos mirábamos, siempre negabas
-            el cómo me mirabas, pero siempre tendré presente la forma en que lo hacías.
+            Aún recuerdo cuando te molestaba a lo lejos con un amigo mío, recuerdo que te mirabas linda, luego nos mirábamos, siempre negabas el como me mirabas, pero siempre tendré presente el como me mirabas.
         </p>
 
         <p>
-            El primer contacto que tuvimos fue en esas gradas del colegio.
-            Nos miramos y sentí que miraba a una niña, no a Sophia sino a Mia.
-            Fue raro, pero lindo a la vez, porque conocí tu lado más lindo por medio
-            de tus ojos.
+            El primer contacto que tuvimos fue en esas gradas del colegio, nos miramos y sentí que miraba a una niña, no a Sophia sino a Mia, fue raro pero lindo a la vez porque conocí tu lado más lindo por medio de tus ojos.
         </p>
 
         <p>
-            Quise conocerte más y te contacté por Instagram. Luego me aceptaste
-            y por molestarme subiste una nota:
-            "Si no, mejor que no me mire".
+            Quise conocerte más y te contacte por Instagram, luego me aceptaste y por molestarme subiste una nota: “Si no mejor que no me mire”. Luego quise igualarlo dandole un like a tus destacadas, luego subes tu una nota: “Y ese like?”.
         </p>
 
         <p>
-            Luego quise igualarlo dándole un like a tus destacadas y después
-            subiste tú una nota:
-            "¿Y ese like?"
+            Desde ese momento supe que era el momento para escribirte, te escribí y me dormí, me levanté con el mensaje tuyo y se me dibujo una sonrisa en el rostro, comenzamos la historia oficialmente.
         </p>
 
         <p>
-            Desde ese momento supe que era el momento para escribirte.
-            Te escribí y me dormí. Me levanté con un mensaje tuyo y se me dibujó
-            una sonrisa en el rostro. Ahí comenzamos nuestra historia oficialmente.
+            Hablábamos y llego tu cumpleaños, te quise sorprender con un pastelito, no te gusto tanto pero mi detalle estuvo, quise llevarte flores pero sentí que era muy intenso de mi parte pero quiero recalcar que en mi corazón siempre estuvo el quererte, amarte y demostrarte lo que es amar a alguien que relativamente en ese tiempo “aún no conocías”.
         </p>
 
         <p>
-            Hablábamos y llegó tu cumpleaños. Quise sorprenderte con un pastelito,
-            no te gustó tanto, pero mi detalle estuvo. Quise llevarte flores,
-            pero sentí que era muy intenso de mi parte.
+            Llego la primera llamada, en esa llamada a ambos nos disgusto, ambos sentimos que fue incomoda e irrespetuosa en cierto punto pero decidimos intentar otra llamada y esa fue el inicio de varias llamadas, tu voz dulce alegraba esos momentos y siempre habían sonrisas, eso siempre hubo.
         </p>
 
         <p>
-            Aun así, quiero recalcar que en mi corazón siempre estuvo el quererte,
-            amarte y demostrarte lo que es amar a alguien que, relativamente,
-            en ese tiempo "aún no conocías".
+            Paso el tiempo y te mirabas más linda en persona, no pudimos compartir mucho pero siempre estará en mi corazón que a pesar del poco tiempo, me extrañaste, no lo digo por ego, lo digo porque pude alcanzar ese corazón y que pudiera sentir lo que yo igualmente sentía.
         </p>
 
         <p>
-            Llegó la primera llamada. En esa llamada a ambos nos disgustó,
-            ambos sentimos que fue incómoda e irrespetuosa en cierto punto,
-            pero decidimos intentar otra llamada y esa fue el inicio de varias.
+            Desde esa despedida ya no nos vimos más y hasta el día de hoy aún no hemos regresado a vernos. Dejare eso hasta aquí, por ahora ese inicio fue lindo, no te voy a negar, hubieron peleas y muy feas pero como siempre te diré, fuiste mi dolor de cabeza favorito.
         </p>
 
         <p>
-            Tu voz dulce alegraba esos momentos y siempre habían sonrisas.
-            Eso siempre estuvo presente.
+            El dolor de cabeza siempre genera un dolor ruidoso y feo, el tuyo era sereno y liviano porque a veces el dolor de cabeza no es por algo malo, es porque algo te importa, tu me importas y eso siempre será así.
         </p>
 
         <p>
-            Pasó el tiempo y te mirabas más linda en persona.
-            No pudimos compartir mucho, pero siempre estará en mi corazón que,
-            a pesar del poco tiempo, me extrañaste.
+            Aún recuerdo el suéter, Malachi y tus gustos de ese tiempo, pero también recuerdo ese día que me demostraste que tenía lugar, cuando en la salida ignoraste todo y sacaste todo por el hecho de que yo estaba en un lugar de tu corazón, capaz no grande pero si estaba en ese lugar.
         </p>
 
         <p>
-            No lo digo por ego, lo digo porque pude alcanzar ese corazón
-            y hacer que sintiera algo parecido a lo que yo igualmente sentía.
+            Luego seguimos hablando a pesar de las adversidades y la distancia, tuvimos una conexión linda mientras aumentaba las llamadas y los textos, siempre me emocionaba cuando me mandabas una foto tuya por lo linda que siempre te mirabas.
         </p>
 
         <p>
-            Desde esa despedida ya no nos vimos más y hasta el día de hoy
-            aún no hemos regresado a vernos.
+            Lastimosamente las discusiones y peleas siguieron hasta distanciarnos, volvimos a hablar y pasaba lo mismo, no encontramos la solución pero a pesar de todo eso quiero que sepas que te amo y te deseo los mejores momentos en estos 17 años, disfruta este tiempo que no se repetirá más.
         </p>
 
         <p>
-            Dejaré eso hasta aquí. Por ahora, ese inicio fue lindo,
-            no te lo voy a negar. Hubieron peleas y muy feas, pero como siempre
-            te diré: fuiste mi dolor de cabeza favorito.
+            Ama y cuida a tus seres queridos que siempre te acompañan en las buenas y malas, no será fácil ni tampoco un martirio, pero siempre estará Dios quien te acompaña en este camino largo que tienes, sigue enamorada de la vida y lo que hay en ella y pues sin nada que agregar por ahora, feliz cumpleaños Mia 🖤
         </p>
 
-        <p>
-            El dolor de cabeza siempre genera un dolor ruidoso y feo.
-            El tuyo era sereno y liviano, porque a veces un dolor de cabeza
-            no es por algo malo, es porque algo te importa.
-        </p>
+        <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
 
         <p>
-            Tú me importas y eso siempre será así.
-            Aún recuerdo el suéter, Malachi y tus gustos de ese tiempo,
-            pero también recuerdo ese día que me demostraste que tenía lugar.
+            Por ser tu cumpleaños, te hice una segunda carta, una más dinámica, espero te guste:
         </p>
 
-        <p>
-            Cuando en la salida ignoraste todo y sacaste todo por el hecho
-            de que yo estaba en un lugar de tu corazón. Capaz no era un lugar
-            grande, pero sí estaba ahí.
-        </p>
-
-        <p>
-            Te amo y te deseo los mejores momentos en estos 17 años.
-            Disfruta este tiempo que no se repetirá más.
-        </p>
-
-        <p>
-            Ama y cuida a tus seres queridos que siempre te acompañan
-            en las buenas y en las malas. No será fácil ni tampoco un martirio,
-            pero siempre estará Dios quien te acompaña en este camino largo que tienes.
-        </p>
-
-        <p>
-            Sigue enamorada de la vida y de todo lo que hay en ella.
-            Sin nada más que agregar por ahora, espera la siguiente carta.
-        </p>
-
-        <p>
-            Feliz cumpleaños, Mia 🖤
-        </p>
-        <p>
-            Por ser tu cumpleaños, te hice una segunda carta, una más dinámica, espero te guste.
-        </p>
-
-        <p style="text-align:center;">
+        <p style="text-align:center; margin-bottom: 30px;">
             <a href="https://adairsitooo.github.io/Cuaderno-Mia/"
                target="_blank"
-               rel="noopener noreferrer">
+               rel="noopener noreferrer"
+               style="display: inline-block; padding: 12px 25px; background-color: #222; color: #fff; text-decoration: none; border-radius: 25px; font-weight: bold; font-family: sans-serif; font-size: 16px;">
                 Ver carta
+            </a>
+        </p>
+
+        <p>
+            Hice también una playlist de canciones que me acuerdan a ti (Incluye canciones que compartimos, que me hacen pensar en ti, gustos tuyos que compartiste conmigo o en Tiktok y el Soundtrack de Omar Courtz en su concierto):
+        </p>
+
+        <p style="text-align:center; margin-top: 15px;">
+            <a href="https://open.spotify.com/playlist/3XExPUavIGCiReAr8B1Br5?si=IuYQC-HhQyKLwRpLuJuSSQ&utm_source=copy-link&pi=VpgIqz7SQkmvS"
+               target="_blank"
+               rel="noopener noreferrer"
+               style="display: inline-block; padding: 12px 25px; background-color: #1DB954; color: #fff; text-decoration: none; border-radius: 25px; font-weight: bold; font-family: sans-serif; font-size: 16px;">
+                Ver playlist
             </a>
         </p>
     `;
@@ -200,5 +153,6 @@ setInterval(actualizarContadores, 60000);
 cerrar.addEventListener("click", () => {
     visor.classList.add("oculto");
 });
+
 
 
