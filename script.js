@@ -15,8 +15,6 @@ carta1.addEventListener("click", () => {
         return;
     }
 
-    imagen.src = "img/foto1.png";
-
     texto.innerHTML = `
       
     `;
